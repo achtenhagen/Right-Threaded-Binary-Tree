@@ -1,5 +1,4 @@
 public class BinaryTree {
-    // Uses Nodes, ignores thread field.
 
     Node root;
 
@@ -36,7 +35,6 @@ public class BinaryTree {
         insert(root,q);
     }
 
-    // Recursive inorder traversal of the tree rooted at p (left, root, right)
     void inorder(Node p) {
 	    if (p == null) { return; }
 	    inorder(p.left);

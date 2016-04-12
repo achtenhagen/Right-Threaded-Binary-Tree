@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.ArrayList;
 
 public class ThreadedTree extends BinaryTree {
 
@@ -56,11 +55,6 @@ public class ThreadedTree extends BinaryTree {
         return q;
     }
 
-	void inorder() {
-		inorder(root);
-		System.out.println();
-	}
-
 	Node leftmost(Node p) {
 		while (p.left != null) {
 			p = p.left;
@@ -68,17 +62,17 @@ public class ThreadedTree extends BinaryTree {
 		return p;
 	}
 
-    // Recursive inorder traversal of the tree rooted at p (left, root, right)
     void inorder(Node p) {
 		Node q = leftmost(p);
 		while (q.right != root) {
 			System.out.print(q.data + " ");
-			if (q.thread) {
-				q = q.right;
-			} else {
-				q = leftmost(q.right);
-			}
+			q = succ(q);
 		}
 		System.out.print(q.data + " ");
     }
+
+	void inorder() {
+		inorder(root);
+		System.out.println();
+	}
 }
