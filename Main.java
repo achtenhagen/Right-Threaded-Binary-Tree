@@ -1,6 +1,5 @@
 import java.util.Random;
 
-// Driver class for binary trees
 public class Main {
     public static void main(String[] args) {
 		{
