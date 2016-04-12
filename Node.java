@@ -1,13 +1,13 @@
 public class Node {
-    int data;
-    Node left,right;
-    boolean thread;
+	int data;
+	Node left,right;
+	boolean thread;
 
-    Node(int n) {
-	    data = n;
+	Node(int n) {
+		data = n;
 	}
 
-    public String toString() {
+	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		sb.append("[").append(data).append(",");
 		if (left != null) {
@@ -25,5 +25,5 @@ public class Node {
 		sb.append(thread);
 		sb.append("]");
 		return sb.toString();
-    }
+	}
 }
